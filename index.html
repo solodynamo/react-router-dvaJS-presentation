@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>react-router V4 && DvaJS: By @solodynamo</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<style media="screen">
+			.reveal h2.js-text-shadow {
+				text-shadow: 1px 1px 15px rgba(0,0,0,0.7);
+			}
+
+			.reveal section img {
+				background: transparent;
+				border: none;
+				box-shadow: none;
+			}
+
+			.reveal a,
+			.js-highlight {
+				color: #ef5285;
+			}
+
+			.reveal a:hover {
+				color: #ef5285;
+			}
+
+			.reveal .progress span {
+				background-color: #ef5285;
+			}
+
+			.reveal .controls .navigate-up,
+			.reveal .controls .navigate-up.enabled {
+				border-bottom-color: #ef5285;
+			}
+
+			.reveal .controls .navigate-right,
+			.reveal .controls .navigate-right.enabled {
+				border-left-color: #ef5285;
+			}
+
+			.reveal .controls .navigate-down,
+			.reveal .controls .navigate-down.enabled {
+				border-top-color: #ef5285;
+			}
+
+			.reveal .controls .navigate-left,
+			.reveal .controls .navigate-left.enabled {
+				border-right-color: #ef5285;
+			}
+
+			.reveal li {
+				list-style-type: none;
+				font-size: 22px;
+				padding-top: 5px;
+			}
+
+			.reveal li::before {
+				content: '▪';
+				display: inline-block;
+				color: #ef5285;
+				margin-right: 15px;
+			}
+		</style>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h4>react-router V4 & DvaJS : <span class="js-highlight">by @solodynamo</span></h4>
+				</section>
+				<section>
+					<h3>What is react-router?</h3>
+					<ol>
+						<li class="fragment fade-up">Router for React which  keeps your UI in sync with the URL.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Features</h3>
+					<ol>
+						<li class="fragment fade-up">Lazy code loading</li>
+						<img class="fragment fade-up" src="media/lazyloading.png"/>
+						<li class="fragment fade-up">Dynamic route matching</li>
+						<img class="fragment fade-up" src="media/dynamicrouting.png"/>
+					</ol>
+				</section>
+				<section>
+					<ol>
+						<li class="fragment fade-up">Dynamic route matching</li>
+						<img class="fragment fade-up" src="media/dynamicrouting.png"/>
+					</ol>
+				</section>
+
+				<section>
+				<h3>Version 3 vs Version 4</h3>
+						<ol>
+							<li class="fragment fade-up">v4 is almost complete rewrite of react-router</li>
+							<li class="fragment fade-up">Reason: Declarative Components</li>
+							<li class="fragment fade-up">Declarative:Answers What You Wanna Do ?</li>
+							<li class="fragment fade-up">So we write our router code as if they were just normal React components.Lets see...</li>
+						</ol>
+				</section>
+				<section>
+					<img class="fragment fade-up" src="media/reactrouter3.png"/>
+				</section>
+				<section>
+					<img class="fragment fade-up" src="media/reactrouter4.png"/>
+					<ol>
+							<li class="fragment fade-up">We treat each <Route /> component just as another react UI component.</li>
+							<li class="fragment fade-up">"exact" attribute in the first <Route /> is to prevent Home component to render together with About or Contact component again.</li>
+							<li class="fragment fade-up">We can further break it down ...PTO</li>
+						</ol>
+				</section>
+				<section>
+
+							<img src="media/reactrouter4break.png" class="stretch"/>
+
+				</section>
+				<section>
+					<h3>Major Changes In Version 4</h3>
+						<ol>
+							<a href="https://github.com/ReactTraining/react-router" class="fragment fade-up"><li>Splitting in Packages</li></a>
+							<a href="https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/modules/index.js" class="fragment fade-up"><li> New BrowserRouter component.</li></a>
+							<a href="https://github.com/ReactTraining/react-router/blob/master/packages/react-router/modules/Route.js" class="fragment fade-up"><li>Route more declarative with 'exact'.</li></a>
+						</ol>
+				</section>
+				</section>
+				<section>
+					<h8>Questions</h8>
+
+				</section>
+				<section>
+					<h8>DvaJS</h8>
+						<img src="media/dvaflow.png" class="stretch"/>
+					<ol>
+						<li class="fragment fade-up">Dva is a lightweight based on react, redux which aims to make building React/Redux applications easier and better.</li>
+					</ol>
+
+				</section>
+				<section>
+					<ol>
+					<img src="media/dApi.png" class="stretch"/>
+					</ol>
+				</section>
+				<section>
+					<h8>Why Use It?</h8>
+					<ol>
+						<li class="fragment fade-up">Less Messy Code.</li>
+						<li class="fragment fade-up">Works with react-native too.</li>
+						<li class="fragment fade-up">Very Small API.</li>
+					</ol>
+				</section>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
